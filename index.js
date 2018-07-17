@@ -8,7 +8,7 @@ const formatDate = (timeInSeconds) => {
 	}
 	else if (s < 3600) {
 		m = Math.floor(s/60);
-		newS= (s- (s*60));
+		newS= (s- (m*60));
 		if (newS === 0) {
 			return m + 'm';
 		}
@@ -21,7 +21,7 @@ const formatDate = (timeInSeconds) => {
 		m = Math.floor((s- 3600*h)/60);
 		newS = (s- (3600*h) - (60*m));
 		if (newS === 0 && m === 0) {
-			return h + 'h ';
+			return h + 'h';
 		}
 		else if (newS === 0) {
 			return h + 'h ' + m + 'm';
