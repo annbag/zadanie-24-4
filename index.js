@@ -13,7 +13,7 @@ const formatDate = (timeInSeconds) => {
 			return m + 'm';
 		}
 		else {
-			return m + 'm' + newS + 's';
+			return m + 'm ' + newS + 's';
 		}
 	} 
 	else if (s >= 3600) {
@@ -21,16 +21,16 @@ const formatDate = (timeInSeconds) => {
 		m = Math.floor((s- 3600*h)/60);
 		newS = (s- (3600*h) - (60*m));
 		if (newS === 0 && m === 0) {
-			return h + 'h';
+			return h + 'h ';
 		}
 		else if (newS === 0) {
-			return h + 'h' + m + 'm';
+			return h + 'h ' + m + 'm';
 		}
 		else if (m === 0) {
-			return h + 'h' + newS + 's';
+			return h + 'h ' + newS + 's';
 		}
 		else {
-			return h + 'h' + m + 'm' + newS + 's';
+			return h + 'h ' + m + 'm ' + newS + 's';
 		}
 	}
   else {
@@ -38,4 +38,4 @@ const formatDate = (timeInSeconds) => {
   };
 }
 
-module.exports = formatDate;`
+module.exports = formatDate;
